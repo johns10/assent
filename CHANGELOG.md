@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.4 (TBA)
+
+* Added `Assent.HTTPAdapter.Finch`
+
 ## v0.2.3 (2023-03-23)
 
 * Removed `:castore` version requirement

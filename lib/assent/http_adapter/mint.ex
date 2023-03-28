@@ -3,7 +3,7 @@ defmodule Assent.HTTPAdapter.Mint do
   HTTP adapter module for making http requests with Mint.
 
   Mint can be configured by updating the configuration to
-  `http_adapter: {HTTPAdapter.Mint, [...]}`.
+  `http_adapter: {Assent.HTTPAdapter.Mint, [...]}`.
 
   See `Assent.HTTPAdapter` for more.
   """

@@ -196,6 +196,8 @@ end
 
 By default Erlangs built-in `:httpc` is used for requests. SSL verification is automatically enabled when `:certifi` and `:ssl_verify_fun` packages are available. `:httpc` only supports HTTP/1.1.
 
+### Mint
+
 If you would like HTTP/2 support, you should consider adding [`Mint`](https://github.com/ericmj/mint) to your project.
 
 Update `mix.exs`:
@@ -217,6 +219,18 @@ config = [
   client_id: "REPLACE_WITH_CLIENT_ID",
   client_secret: "REPLACE_WITH_CLIENT_SECRET",
   http_adapter: Assent.HTTPAdapter.Mint
+]
+```
+
+### Finch
+
+You can also use Finch to use your connection pool:
+
+```elixir
+config = [
+  client_id: "REPLACE_WITH_CLIENT_ID",
+  client_secret: "REPLACE_WITH_CLIENT_SECRET",
+  http_adapter: {Assent.HTTPAdapter.Finch, supervisor: MyFinch}
 ]
 ```
 
